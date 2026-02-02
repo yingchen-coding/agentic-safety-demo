@@ -269,6 +269,7 @@ jobs:
 | [pre_mortem_12_month_failure.md](docs/pre_mortem_12_month_failure.md) | How this system fails |
 | [safety_vs_velocity_tradeoff_framework.md](docs/safety_vs_velocity_tradeoff_framework.md) | Speed vs safety decision framework |
 | [what_we_will_not_build_capability_boundaries.md](docs/what_we_will_not_build_capability_boundaries.md) | Explicit no-go capabilities |
+| [first_90_days_safety_strategy.md](docs/first_90_days_safety_strategy.md) | New product safety bootstrap |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
 ---
