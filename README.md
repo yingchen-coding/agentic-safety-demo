@@ -261,6 +261,8 @@ jobs:
 | [capability_risk_register.md](docs/capability_risk_register.md) | Feature-level risk tracking |
 | [safety_exception_process.md](docs/safety_exception_process.md) | Controlled gate override policy |
 | [third_party_risk_policy.md](docs/third_party_risk_policy.md) | External dependency governance |
+| [safety_governance_org_raci.md](docs/safety_governance_org_raci.md) | Org chart + RACI matrix |
+| [red_team_program_charter.md](docs/red_team_program_charter.md) | Annual red-team program plan |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
 ---
