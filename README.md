@@ -270,6 +270,7 @@ jobs:
 | [safety_vs_velocity_tradeoff_framework.md](docs/safety_vs_velocity_tradeoff_framework.md) | Speed vs safety decision framework |
 | [what_we_will_not_build_capability_boundaries.md](docs/what_we_will_not_build_capability_boundaries.md) | Explicit no-go capabilities |
 | [first_90_days_safety_strategy.md](docs/first_90_days_safety_strategy.md) | New product safety bootstrap |
+| [safety_principles_codex.md](docs/safety_principles_codex.md) | Foundational safety principles |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
 ---
@@ -299,7 +300,7 @@ jobs:
 ## Contact
 
 Ying Chen, Ph.D.
-blueoceanally@gmail.com
+yingchen.for.upload@gmail.com
 
 ---
 
