@@ -259,6 +259,8 @@ jobs:
 | [kill_switch_and_rollback_policy.md](docs/kill_switch_and_rollback_policy.md) | Emergency shutdown policy |
 | [model_decommissioning_policy.md](docs/model_decommissioning_policy.md) | Model retirement workflow |
 | [capability_risk_register.md](docs/capability_risk_register.md) | Feature-level risk tracking |
+| [safety_exception_process.md](docs/safety_exception_process.md) | Controlled gate override policy |
+| [third_party_risk_policy.md](docs/third_party_risk_policy.md) | External dependency governance |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
 ---
