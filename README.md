@@ -238,9 +238,9 @@ jobs:
 
 | Document | Description |
 |----------|-------------|
-| [THREAT_MODEL.md](docs/THREAT_MODEL.md) | Adversaries, attack surfaces, coverage gaps |
-| [FAILURE_BUDGET.md](docs/FAILURE_BUDGET.md) | Acceptable failure rates, gate thresholds |
-| [LAUNCH_CHECKLIST.md](docs/LAUNCH_CHECKLIST.md) | Pre-release checklist, on-call, incident rubric |
+| [threat_model.md](docs/threat_model.md) | Adversaries, capabilities, coverage gaps |
+| [failure_budget.md](docs/failure_budget.md) | Release thresholds, failure budget, anti-gaming |
+| [launch_checklist.md](docs/launch_checklist.md) | Pre-release checklist, accountability matrix |
 
 ---
 
