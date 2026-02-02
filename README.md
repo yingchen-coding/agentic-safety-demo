@@ -245,6 +245,7 @@ jobs:
 | [oncall_playbook.md](docs/oncall_playbook.md) | Incident response runbook |
 | [metrics_glossary.md](docs/metrics_glossary.md) | Safety metrics definitions |
 | [security_review_checklist.md](docs/security_review_checklist.md) | ProdSec / Infra sign-off checklist |
+| [security_release_workflow.md](docs/security_release_workflow.md) | Security review -> release sign-off flow |
 | [model_card_safety.md](docs/model_card_safety.md) | Model card safety section template |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
