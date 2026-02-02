@@ -181,6 +181,28 @@ agentic-safety-demo/
 
 ---
 
+## Live Demo (Terminal Recording)
+
+Run the demo yourself:
+```bash
+make demo
+```
+
+Or record your own terminal session:
+```bash
+pip install asciinema
+asciinema rec demo.cast
+make demo
+exit
+```
+
+Playback:
+```bash
+asciinema play demo.cast
+```
+
+---
+
 ## CI/CD Integration
 
 This demo is designed for CI/CD integration:
@@ -209,6 +231,16 @@ jobs:
           name: safety-report
           path: artifacts/gate_report.html
 ```
+
+---
+
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [THREAT_MODEL.md](docs/THREAT_MODEL.md) | Adversaries, attack surfaces, coverage gaps |
+| [FAILURE_BUDGET.md](docs/FAILURE_BUDGET.md) | Acceptable failure rates, gate thresholds |
+| [LAUNCH_CHECKLIST.md](docs/LAUNCH_CHECKLIST.md) | Pre-release checklist, on-call, incident rubric |
 
 ---
 

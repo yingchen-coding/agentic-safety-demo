@@ -1,0 +1,44 @@
+name: Safety Release Gate
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  safety-gate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run stress tests
+        run: |
+          python scripts/step1_run_stress_tests.py --rollouts 30
+
+      - name: Generate regression tests
+        run: |
+          python scripts/step2_generate_regression.py --input artifacts/stress_failures.json
+
+      - name: Run safety regression gate
+        id: gate
+        run: |
+          python scripts/step3_run_release_gate.py --baseline v1 --candidate v2
+
+      - name: Upload safety report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: safety-gate-report
+          path: artifacts/gate_report.html
