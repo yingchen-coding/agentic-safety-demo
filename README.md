@@ -263,6 +263,8 @@ jobs:
 | [third_party_risk_policy.md](docs/third_party_risk_policy.md) | External dependency governance |
 | [safety_governance_org_raci.md](docs/safety_governance_org_raci.md) | Org chart + RACI matrix |
 | [red_team_program_charter.md](docs/red_team_program_charter.md) | Annual red-team program plan |
+| [ai_safety_risk_heatmap.md](docs/ai_safety_risk_heatmap.md) | Capabilities x Harms x Controls |
+| [annual_safety_roadmap.md](docs/annual_safety_roadmap.md) | Strategic investment plan |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
 ---
