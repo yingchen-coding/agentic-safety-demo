@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.claude/
+
+# Artifacts (keep example, ignore generated)
+artifacts/*.json
+!artifacts/incident_example.json
+artifacts/*.html
+
+# OS
+.DS_Store
+Thumbs.db
