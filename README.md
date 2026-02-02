@@ -251,6 +251,8 @@ jobs:
 | [model_card_safety.md](docs/model_card_safety.md) | Model card safety section template |
 | [safety_metrics_dashboard_spec.md](docs/safety_metrics_dashboard_spec.md) | Grafana/Datadog dashboard spec |
 | [residual_risk_acceptance_memo.md](docs/residual_risk_acceptance_memo.md) | VP/Legal risk sign-off template |
+| [safety_slo_error_budget.md](docs/safety_slo_error_budget.md) | SRE-style safety SLOs and error budgets |
+| [board_level_safety_update.md](docs/board_level_safety_update.md) | Board of Directors safety briefing |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
 ---
