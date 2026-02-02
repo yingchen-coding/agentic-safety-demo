@@ -257,6 +257,8 @@ jobs:
 | [post_incident_external_disclosure.md](docs/post_incident_external_disclosure.md) | Public incident disclosure template |
 | [ai_safety_regulatory_mapping.md](docs/ai_safety_regulatory_mapping.md) | EU AI Act / NIST RMF mapping |
 | [kill_switch_and_rollback_policy.md](docs/kill_switch_and_rollback_policy.md) | Emergency shutdown policy |
+| [model_decommissioning_policy.md](docs/model_decommissioning_policy.md) | Model retirement workflow |
+| [capability_risk_register.md](docs/capability_risk_register.md) | Feature-level risk tracking |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
 ---
