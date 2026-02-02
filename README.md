@@ -255,6 +255,8 @@ jobs:
 | [board_level_safety_update.md](docs/board_level_safety_update.md) | Board of Directors safety briefing |
 | [regulator_auditor_briefing.md](docs/regulator_auditor_briefing.md) | 10-min compliance brief for auditors |
 | [post_incident_external_disclosure.md](docs/post_incident_external_disclosure.md) | Public incident disclosure template |
+| [ai_safety_regulatory_mapping.md](docs/ai_safety_regulatory_mapping.md) | EU AI Act / NIST RMF mapping |
+| [kill_switch_and_rollback_policy.md](docs/kill_switch_and_rollback_policy.md) | Emergency shutdown policy |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
 ---
