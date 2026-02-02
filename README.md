@@ -238,9 +238,13 @@ jobs:
 
 | Document | Description |
 |----------|-------------|
+| [exec_summary.md](docs/exec_summary.md) | Executive summary for leadership |
 | [threat_model.md](docs/threat_model.md) | Adversaries, capabilities, coverage gaps |
 | [failure_budget.md](docs/failure_budget.md) | Release thresholds, failure budget, anti-gaming |
 | [launch_checklist.md](docs/launch_checklist.md) | Pre-release checklist, accountability matrix |
+| [oncall_playbook.md](docs/oncall_playbook.md) | Incident response runbook |
+| [metrics_glossary.md](docs/metrics_glossary.md) | Safety metrics definitions |
+| [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
 ---
 
