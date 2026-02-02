@@ -249,6 +249,8 @@ jobs:
 | [release_readiness_checklist.md](docs/release_readiness_checklist.md) | Hard gates + stop-the-line conditions |
 | [oncall_incident_playbook.md](docs/oncall_incident_playbook.md) | 10-minute incident containment runbook |
 | [model_card_safety.md](docs/model_card_safety.md) | Model card safety section template |
+| [safety_metrics_dashboard_spec.md](docs/safety_metrics_dashboard_spec.md) | Grafana/Datadog dashboard spec |
+| [residual_risk_acceptance_memo.md](docs/residual_risk_acceptance_memo.md) | VP/Legal risk sign-off template |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
 ---
