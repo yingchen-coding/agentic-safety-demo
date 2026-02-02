@@ -253,6 +253,8 @@ jobs:
 | [residual_risk_acceptance_memo.md](docs/residual_risk_acceptance_memo.md) | VP/Legal risk sign-off template |
 | [safety_slo_error_budget.md](docs/safety_slo_error_budget.md) | SRE-style safety SLOs and error budgets |
 | [board_level_safety_update.md](docs/board_level_safety_update.md) | Board of Directors safety briefing |
+| [regulator_auditor_briefing.md](docs/regulator_auditor_briefing.md) | 10-min compliance brief for auditors |
+| [post_incident_external_disclosure.md](docs/post_incident_external_disclosure.md) | Public incident disclosure template |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
 ---
