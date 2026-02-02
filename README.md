@@ -265,6 +265,8 @@ jobs:
 | [red_team_program_charter.md](docs/red_team_program_charter.md) | Annual red-team program plan |
 | [ai_safety_risk_heatmap.md](docs/ai_safety_risk_heatmap.md) | Capabilities x Harms x Controls |
 | [annual_safety_roadmap.md](docs/annual_safety_roadmap.md) | Strategic investment plan |
+| [safety_investment_roi_model.md](docs/safety_investment_roi_model.md) | Cost of incidents vs safeguards |
+| [pre_mortem_12_month_failure.md](docs/pre_mortem_12_month_failure.md) | How this system fails |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
 
 ---
