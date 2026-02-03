@@ -269,6 +269,25 @@ jobs:
 
 ---
 
+## System Constitution
+
+> **The governing framework that defines how the 8-repo system operates.**
+
+The System Constitution is the explicit contract that eliminates ambiguity about boundaries, authority, and data flows. Located in [`docs/constitution/`](docs/constitution/).
+
+| Document | Key Question |
+|----------|--------------|
+| [README.md](docs/constitution/README.md) | How does this governance system work? |
+| [metric_definitions.md](docs/constitution/metric_definitions.md) | What exactly does each metric mean? |
+| [release_authority.md](docs/constitution/release_authority.md) | Who can block a release? |
+| [data_contracts.md](docs/constitution/data_contracts.md) | What format does each repo expect? |
+| [failure_escalation_policy.md](docs/constitution/failure_escalation_policy.md) | What happens when something breaks? |
+| [observability_standard.md](docs/constitution/observability_standard.md) | How do we debug across repos? |
+
+**Why this matters**: In real safety organizations, systems fail not from missing components but from unclear ownership, authority confusion, and metric drift. This constitution makes implicit contracts explicit.
+
+---
+
 ## Documentation
 
 ### By Audience
