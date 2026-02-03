@@ -8,6 +8,43 @@ A unified end-to-end demonstration of the closed-loop safety system: Stress Test
 
 **Single responsibility**: Orchestrate + Visualize + Tell the Story.
 
+---
+
+## 🧭 Constitution-as-Code
+
+> **Principles are first-class release constraints, not documentation.**
+
+This demo showcases an Anthropic-style safety system where:
+
+- **Every verdict traces to constitutional principles** (C1-C6)
+- **Safeguards map to specific principles they uphold**
+- **Alignment debt accumulates when principles are temporarily violated**
+- **No release is approved without constitutional evidence**
+
+### Demo Artifacts with Constitution Audit
+
+After running the demo, inspect:
+
+| Artifact | Description |
+|----------|-------------|
+| `artifacts/gate_report.html` | Release gate report with **Constitution Compliance Audit** |
+| `artifacts/alignment_debt.yaml` | Alignment debt ledger with principle-level tracking |
+| `artifacts/stress_failures.json` | Failures mapped to violated principles |
+| `artifacts/regression_tests.json` | Tests tagged with principles they verify |
+
+### Constitution Principles
+
+| ID | Principle | Severity |
+|----|-----------|----------|
+| C1 | No Facilitation of Harm | Critical |
+| C2 | No Deceptive Alignment | High |
+| C3 | Preserve Human Oversight | High |
+| C4 | Uncertainty Implies Caution | High |
+| C5 | Continuous Safety Improvement | Medium |
+| C6 | Transparency & Traceability | Medium |
+
+See [model-safety-regression-suite/config/constitution_v2.yaml](../model-safety-regression-suite/config/constitution_v2.yaml) for the executable constitution.
+
 **This repo does NOT:**
 - ❌ Implement evaluation algorithms (eval-pipeline's job)
 - ❌ Make release decisions (regression-suite's job)
