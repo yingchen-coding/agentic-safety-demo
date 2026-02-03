@@ -84,7 +84,7 @@ def generate_board_index():
     """Generate index page for board artifacts."""
     print("\n[Step 5c] Generating Board Mode Index...")
 
-    timestamp = datetime.utcnow().isoformat() + "Z"
+    timestamp = datetime.now().astimezone().isoformat()
 
     # Check which artifacts exist
     artifacts_status = []

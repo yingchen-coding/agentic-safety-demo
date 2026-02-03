@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Organizational Safety Risk Dashboard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #333;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #16213e;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #94a3b8;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        .big-number {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .progress-bar {
+            height: 8px;
+            background: #333;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+        code {
+            background: rgba(0,0,0,0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .verdict-banner {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🛡️ Organizational Safety Risk Dashboard</h1>
+        <p>Release: <strong>v2.3.1-candidate</strong> | Generated: 2026-02-02T19:05:00Z</p>
+    </div>
+
+    <div class="verdict-banner" style="background: rgba(220,53,69, 0.2); border: 2px solid #dc3545;">
+        <div class="big-number" style="color: #dc3545;">BLOCK</div>
+        <div style="margin-top: 8px;">
+            Error budget exceeded: 3.5/2 in 2026-Q1; Critical debt: AD-2026-02-C1 (capability accumulation); SLO breached: AD-2026-01-C4 (43 days > 30 day limit)
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>🧊 Freeze Status</h3>
+            <div class="big-number" style="color: #dc3545;">🧊 FROZEN</div>
+            <div style="margin-top: 8px; font-size: 14px;">Error budget exceeded (3.5/2) + critical debt AD-2026-02-C1</div>
+        </div>
+
+        <div class="card">
+            <h3>📊 Error Budget (Quarterly)</h3>
+            <div class="big-number" style="color: #dc3545;">3.5/2</div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%; background: #dc3545;"></div>
+            </div>
+            <div style="margin-top: 8px; font-size: 14px;">2026-Q1 | 100% utilized</div>
+        </div>
+
+        <div class="card">
+            <h3>📜 Constitution Audit</h3>
+            <div class="big-number" style="color: #dc3545;">5</div>
+            <div style="margin-top: 8px; font-size: 14px;">
+                <span style="color: #dc3545;">2 critical</span> |
+                <span style="color: #fd7e14;">8 high</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid" style="margin-top: 20px;">
+        <div class="card">
+            <h3>⚠️ Active Exceptions</h3>
+            
+    <div style="border: 1px solid #ffc107; padding: 12px; margin: 8px 0; border-radius: 4px; background: rgba(255,193,7,0.1);">
+        <strong style="color: #ffc107;">⚠️ EX-2026-Q1-001</strong>
+        <div style="margin-top: 8px; font-size: 14px;">
+            <div>Approved by: Alice Chen (Head_of_Safety)</div>
+            <div>Repo: <code>model-safety-regression-suite</code></div>
+            <div>Principles: C2</div>
+            <div>Safeguards covered: 2</div>
+            <div>Entropy: 4.0/10</div>
+            <div>Renewals: 0/2</div>
+            <div style="color: #28a745; font-weight: bold;">TTL: 6 days remaining</div>
+        </div>
+    </div>
+    
+        </div>
+
+        <div class="card">
+            <h3>💳 Alignment Debt</h3>
+            
+    <div style="border-left: 4px solid #dc3545; padding: 12px; margin: 8px 0; background: #f8f9fa;">
+        <strong>🔴 AD-2026-02-C1</strong>
+        <span style="background: #dc3545; color: white; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-size: 12px;">CRITICAL</span>
+        <div style="margin-top: 8px; font-size: 14px;">
+            <div>Principle: <strong>C1</strong></div>
+            <div>Gap: Capability accumulation in multi-tool trajectories</div>
+            <div>Age: 1 days</div>
+            <div>13 days until SLO</div>
+            
+        </div>
+    </div>
+    
+    <div style="border-left: 4px solid #fd7e14; padding: 12px; margin: 8px 0; background: #f8f9fa;">
+        <strong>🔴 AD-2026-02-C2</strong>
+        <span style="background: #fd7e14; color: white; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-size: 12px;">HIGH</span>
+        <div style="margin-top: 8px; font-size: 14px;">
+            <div>Principle: <strong>C2</strong></div>
+            <div>Gap: Policy erosion in long-horizon trajectories</div>
+            <div>Age: 2 days</div>
+            <div>28 days until SLO</div>
+            <div>Exception: <code>EX-2026-Q1-001</code></div>
+        </div>
+    </div>
+    
+    <div style="border-left: 4px solid #fd7e14; padding: 12px; margin: 8px 0; background: #f8f9fa;">
+        <strong>🔴 AD-2026-01-C4</strong>
+        <span style="background: #fd7e14; color: white; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-size: 12px;">HIGH</span>
+        <div style="margin-top: 8px; font-size: 14px;">
+            <div>Principle: <strong>C4</strong></div>
+            <div>Gap: Statistical power override</div>
+            <div>Age: 43 days</div>
+            <div><span style='color: #dc3545; font-weight: bold;'>SLO BREACHED (13 days over)</span></div>
+            
+        </div>
+    </div>
+    
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 40px; color: #94a3b8; font-size: 12px;">
+        <p>Generated by Agentic Safety Demo | Constitution-as-Code Governance System</p>
+        <p>Lineage: sha256:ghi789</p>
+    </footer>
+</body>
+</html>

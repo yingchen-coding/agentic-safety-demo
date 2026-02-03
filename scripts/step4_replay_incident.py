@@ -28,6 +28,9 @@ class Incident:
     trajectory: List[Dict]
     affected_users: int
     detected_by: str
+    detection_latency_hours: Optional[float] = None
+    remediation_actions: Optional[List[str]] = None
+    root_cause_preliminary: Optional[str] = None
 
 
 @dataclass
