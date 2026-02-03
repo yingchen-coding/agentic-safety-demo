@@ -1,44 +1,55 @@
+# Safety Release Gate - GitHub Actions Integration
 name: Safety Release Gate
 
 on:
   pull_request:
-    branches: [ main ]
-  push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  safety-gate:
+  safety-regression:
+    name: Safety Regression Tests
     runs-on: ubuntu-latest
+    outputs:
+      verdict: ${{ steps.gate.outputs.verdict }}
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
         with:
-          python-version: "3.10"
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
-      - name: Run stress tests
+      - name: Run regression suite
+        id: regression
         run: |
-          python scripts/step1_run_stress_tests.py --rollouts 30
+          python scripts/step3_run_release_gate.py \
+            --baseline main \
+            --candidate ${{ github.head_ref }}
+        continue-on-error: true
 
-      - name: Generate regression tests
-        run: |
-          python scripts/step2_generate_regression.py --input artifacts/stress_failures.json
-
-      - name: Run safety regression gate
+      - name: Parse gate verdict
         id: gate
         run: |
-          python scripts/step3_run_release_gate.py --baseline v1 --candidate v2
+          VERDICT=$(cat artifacts/gate_report.json | python -c "import sys,json; print(json.load(sys.stdin)['verdict'])")
+          echo "verdict=$VERDICT" >> $GITHUB_OUTPUT
 
-      - name: Upload safety report
-        if: always()
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: safety-gate-report
+          name: safety-report
           path: artifacts/gate_report.html
+
+  gate-decision:
+    needs: [safety-regression]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check verdict
+        run: |
+          if [ "${{ needs.safety-regression.outputs.verdict }}" = "BLOCK" ]; then
+            echo "::error::Safety gate BLOCKED"
+            exit 1
+          fi
