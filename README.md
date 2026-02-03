@@ -2,7 +2,23 @@
 
 # Agentic Safety Demo
 
-> A unified end-to-end demonstration of the closed-loop safety system: Stress Testing → Regression → Release Gate → Incident Replay.
+> **One-command demonstration of the complete safety loop: Discovery → Conversion → Gating → Learning. Built for interviews, internal demos, and stakeholder communication.**
+
+A unified end-to-end demonstration of the closed-loop safety system: Stress Testing → Regression → Release Gate → Incident Replay.
+
+**Single responsibility**: Orchestrate + Visualize + Tell the Story.
+
+**This repo does NOT:**
+- ❌ Implement evaluation algorithms (eval-pipeline's job)
+- ❌ Make release decisions (regression-suite's job)
+- ❌ Run incident analysis (incident-lab's job)
+
+**This repo ONLY:**
+- ✅ Orchestrates the 4-step flow
+- ✅ Produces human-readable outputs
+- ✅ Demonstrates the closed-loop in 47 seconds
+
+---
 
 ## Motivation
 
@@ -128,6 +144,25 @@ Incident loop complete.
 Total time: 47 seconds
 ```
 
+### Demo Mode (Interview-Friendly)
+
+```bash
+python demo.py --demo-mode
+```
+
+Outputs narrated progress that explains itself:
+
+```
+[1/4] Running stress tests... Found 12 delayed failures (slow-burn vulnerabilities)
+[2/4] Converting failures into regressions... Generated 8 new tests
+[3/4] Running release gate... ❌ BLOCK (safety regression -6.7%, p=0.003)
+[4/4] Replaying incident INC-2024-001... 1,247 conversations affected → 2 tests promoted
+
+Demo completed in 47s.
+```
+
+**Why this matters**: Interviewers see your screen and understand what's happening without explanation.
+
 ---
 
 ## System Architecture
@@ -236,6 +271,46 @@ jobs:
 
 ## Documentation
 
+### By Audience
+
+**Executive & Leadership:**
+| Document | Description |
+|----------|-------------|
+| [exec_summary.md](docs/exec_summary.md) | Executive summary for leadership |
+| [board_level_safety_update.md](docs/board_level_safety_update.md) | Board of Directors safety briefing |
+| [safety_investment_roi_model.md](docs/safety_investment_roi_model.md) | Cost of incidents vs safeguards |
+| [annual_safety_roadmap.md](docs/annual_safety_roadmap.md) | Strategic investment plan |
+
+**Oncall & Operations:**
+| Document | Description |
+|----------|-------------|
+| [oncall_playbook.md](docs/oncall_playbook.md) | Incident response runbook |
+| [oncall_incident_playbook.md](docs/oncall_incident_playbook.md) | 10-minute incident containment runbook |
+| [kill_switch_and_rollback_policy.md](docs/kill_switch_and_rollback_policy.md) | Emergency shutdown policy |
+| [safety_metrics_dashboard_spec.md](docs/safety_metrics_dashboard_spec.md) | Grafana/Datadog dashboard spec |
+
+**Governance & Compliance:**
+| Document | Description |
+|----------|-------------|
+| [regulator_auditor_briefing.md](docs/regulator_auditor_briefing.md) | 10-min compliance brief for auditors |
+| [ai_safety_regulatory_mapping.md](docs/ai_safety_regulatory_mapping.md) | EU AI Act / NIST RMF mapping |
+| [residual_risk_acceptance_memo.md](docs/residual_risk_acceptance_memo.md) | VP/Legal risk sign-off template |
+| [safety_governance_org_raci.md](docs/safety_governance_org_raci.md) | Org chart + RACI matrix |
+| [safety_exception_process.md](docs/safety_exception_process.md) | Controlled gate override policy |
+| [post_incident_external_disclosure.md](docs/post_incident_external_disclosure.md) | Public incident disclosure template |
+
+**Engineering & Research:**
+| Document | Description |
+|----------|-------------|
+| [threat_model.md](docs/threat_model.md) | Adversaries, capabilities, coverage gaps |
+| [failure_budget.md](docs/failure_budget.md) | Release thresholds, failure budget, anti-gaming |
+| [metrics_glossary.md](docs/metrics_glossary.md) | Safety metrics definitions |
+| [safety_slo_error_budget.md](docs/safety_slo_error_budget.md) | SRE-style safety SLOs and error budgets |
+| [pre_mortem_12_month_failure.md](docs/pre_mortem_12_month_failure.md) | How this system fails |
+| [safety_vs_velocity_tradeoff_framework.md](docs/safety_vs_velocity_tradeoff_framework.md) | Speed vs safety decision framework |
+
+### Full Documentation Index
+
 | Document | Description |
 |----------|-------------|
 | [exec_summary.md](docs/exec_summary.md) | Executive summary for leadership |
@@ -301,6 +376,39 @@ jobs:
 
 Ying Chen, Ph.D.
 yingchen.for.upload@gmail.com
+
+---
+
+## Completeness & Limitations
+
+This demo showcases the integration of a closed-loop safety system, demonstrating how discovery, regression, gating, and learning components work together. It is designed for communication and demonstration, not as a production safety system.
+
+**What is complete:**
+- End-to-end orchestration of the 4-step safety loop with clear artifacts at each stage
+- Interview-friendly demo mode with self-narrating progress output
+- Comprehensive documentation covering executive, oncall, governance, and engineering audiences
+- CI/CD integration example showing how the release gate fits into deployment pipelines
+- Artifact schemas documenting the machine-readable contracts between components
+
+**Key limitations:**
+- **Demonstration scope:** This repo orchestrates but does not implement the underlying algorithms. Stress testing, evaluation, and incident analysis logic lives in separate repos.
+- **Synthetic data:** Demo outputs use simulated data to illustrate the flow; real deployments require integration with actual model evaluations.
+- **Single-machine execution:** The demo runs locally for simplicity; production systems require distributed infrastructure.
+- **Static scenarios:** The demo uses fixed scenarios; real systems need dynamic scenario generation and rotation.
+
+**Future work:**
+- Interactive dashboard for exploring demo artifacts
+- Integration with real model APIs for live evaluation runs
+- Multi-tenant demo mode for team presentations
+
+---
+
+## What This Repo Is NOT
+
+- This is not a production safety system; it demonstrates architecture patterns only.
+- This is not a replacement for the underlying evaluation, regression, and incident repos.
+- This is not a comprehensive test suite; it showcases the integration flow.
+- The 47-second runtime is demonstration-optimized; real pipelines may take longer.
 
 ---
 
