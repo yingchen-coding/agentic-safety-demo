@@ -347,6 +347,7 @@ jobs:
 | [first_90_days_safety_strategy.md](docs/first_90_days_safety_strategy.md) | New product safety bootstrap |
 | [safety_principles_codex.md](docs/safety_principles_codex.md) | Foundational safety principles |
 | [interview_onepager.md](docs/interview_onepager.md) | Portfolio system overview |
+| [why_closed_loop_beats_static_eval.md](docs/why_closed_loop_beats_static_eval.md) | Architecture comparison with industry practices |
 
 ---
 
