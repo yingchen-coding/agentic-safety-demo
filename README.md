@@ -45,6 +45,49 @@ After running the demo, inspect:
 
 See [model-safety-regression-suite/config/constitution_v2.yaml](../model-safety-regression-suite/config/constitution_v2.yaml) for the executable constitution.
 
+---
+
+## 🛡️ Organizational Safety Governance
+
+This demo implements a complete **AI Safety SRE system**:
+
+### Closed-Loop Governance Flow
+
+```
+Exception → Constitution Audit → Alignment Debt → Freeze Playbook
+                     ↓
+            Risk Dashboard (Visualization)
+```
+
+### Governance Mechanisms
+
+| Mechanism | Effect |
+|-----------|--------|
+| **Error Budget** | Max 2 new debts/quarter, exceeded = BLOCK |
+| **Debt SLO** | 14d critical, 30d high, 60d medium = auto-BLOCK |
+| **Safety Freeze** | Budget exceeded = release frozen |
+| **Exception Authority** | Only Head_of_Safety can unfreeze |
+| **Blast Radius Limiter** | Max 5 safeguards + 3 principles per exception |
+| **Incident Review** | Every exception triggers mandatory review |
+
+### Risk Dashboard
+
+Run the demo to generate the organizational risk dashboard:
+
+```bash
+python scripts/render_risk_dashboard.py
+open artifacts/risk_dashboard.html
+```
+
+The dashboard shows:
+- Active exceptions with TTL countdown
+- Alignment debt with SLO status
+- Error budget utilization
+- Constitution audit summary
+- Freeze status
+
+---
+
 **This repo does NOT:**
 - ❌ Implement evaluation algorithms (eval-pipeline's job)
 - ❌ Make release decisions (regression-suite's job)
