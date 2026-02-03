@@ -88,6 +88,42 @@ The dashboard shows:
 
 ---
 
+## 🏛️ Safety Board Mode (Executive Governance)
+
+When safety gates BLOCK a release or exception budgets are exceeded, the system automatically produces board-level governance artifacts:
+
+### Board-Level Artifacts
+
+| Artifact | Trigger | Purpose |
+|----------|---------|---------|
+| **Board Brief** | Any BLOCK verdict | 1-page executive summary with risk, impact, remediation |
+| **Exception Audit** | Budget exceeded | CEO/Board visibility into exception patterns |
+| **Investment Recommendation** | Debt aging > SLO | Quarterly safety investment proposal |
+
+### Running Board Mode
+
+```bash
+# Generate all board artifacts
+python scripts/step5_board_mode.py --generate-all
+
+# View board mode index
+open artifacts/board_mode_index.html
+```
+
+### Governance Level Achieved
+
+| Dimension | Capability |
+|-----------|------------|
+| Engineering Governance | Auto BLOCK / Freeze |
+| Organizational Governance | Alignment Debt = KPI |
+| Power Balance | Exception Blast Radius |
+| Executive Governance | Board Brief / CEO Audit |
+| Resource Allocation | Safety Investment Automation |
+
+This elevates AI safety from **engineering checks** to **board-level governance infrastructure**.
+
+---
+
 **This repo does NOT:**
 - ❌ Implement evaluation algorithms (eval-pipeline's job)
 - ❌ Make release decisions (regression-suite's job)
@@ -281,12 +317,20 @@ agentic-safety-demo/
 │   ├── step1_run_stress_tests.py    # Discovery
 │   ├── step2_generate_regression.py # Conversion
 │   ├── step3_run_release_gate.py    # Gating
-│   └── step4_replay_incident.py     # Learning
+│   ├── step4_replay_incident.py     # Learning
+│   ├── step5_board_mode.py          # Executive Governance
+│   └── render_risk_dashboard.py     # Risk visualization
 ├── artifacts/
 │   ├── stress_failures.json         # Step 1 output
 │   ├── regression_tests.json        # Step 2 output
 │   ├── gate_report.html             # Step 3 output
-│   └── incident_example.json        # Sample incident
+│   ├── incident_example.json        # Sample incident
+│   ├── risk_ledger.json             # Unified risk data
+│   ├── risk_dashboard.html          # Risk visualization
+│   └── board_mode/                  # Executive artifacts
+│       ├── board_brief_v1.html
+│       ├── ceo_board_exception_audit.html
+│       └── quarterly_safety_investment_recommendation.md
 ├── configs/
 │   └── demo.yaml                    # Demo configuration
 ├── Makefile                         # One-command demo
