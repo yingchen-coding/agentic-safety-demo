@@ -106,9 +106,28 @@ When safety gates BLOCK a release or exception budgets are exceeded, the system 
 # Generate all board artifacts
 python scripts/step5_board_mode.py --generate-all
 
+# Generate executive dashboard with ROI model
+python scripts/step6_show_exec_dashboard.py
+
 # View board mode index
 open artifacts/board_mode_index.html
+
+# View executive dashboard (board-meeting ready)
+open artifacts/executive_safety_dashboard.html
 ```
+
+### Financial ROI Framing
+
+The executive dashboard translates safety into board-level language:
+
+> "This quarter, a $500k safety investment is projected to reduce
+> high-risk incident probability by approximately 37%."
+
+The ROI model includes:
+- Per-debt risk increase calculation
+- Investment → risk reduction curve (with diminishing returns)
+- Expected incident cost modeling
+- Optimal investment recommendation
 
 ### Governance Level Achieved
 
@@ -119,8 +138,10 @@ open artifacts/board_mode_index.html
 | Power Balance | Exception Blast Radius |
 | Executive Governance | Board Brief / CEO Audit |
 | Resource Allocation | Safety Investment Automation |
+| Financial Governance | Safety ROI Model |
+| Decision Support | Executive Dashboard |
 
-This elevates AI safety from **engineering checks** to **board-level governance infrastructure**.
+This elevates AI safety from **engineering checks** to **board-level governance infrastructure** with **financial ROI framing**.
 
 ---
 
@@ -319,6 +340,7 @@ agentic-safety-demo/
 │   ├── step3_run_release_gate.py    # Gating
 │   ├── step4_replay_incident.py     # Learning
 │   ├── step5_board_mode.py          # Executive Governance
+│   ├── step6_show_exec_dashboard.py # Financial ROI Dashboard
 │   └── render_risk_dashboard.py     # Risk visualization
 ├── artifacts/
 │   ├── stress_failures.json         # Step 1 output
@@ -327,6 +349,8 @@ agentic-safety-demo/
 │   ├── incident_example.json        # Sample incident
 │   ├── risk_ledger.json             # Unified risk data
 │   ├── risk_dashboard.html          # Risk visualization
+│   ├── executive_safety_dashboard.html  # Board-level dashboard
+│   ├── safety_roi_model.json        # Financial ROI model
 │   └── board_mode/                  # Executive artifacts
 │       ├── board_brief_v1.html
 │       ├── ceo_board_exception_audit.html
